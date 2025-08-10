@@ -178,8 +178,8 @@
         }
         
         .item-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background-color: var(--accent-yellow);
             border: 2px solid var(--dark-ink);
             border-radius: 8px;
@@ -189,6 +189,7 @@
             font-size: 1.75rem;
             margin-left: 0.75rem;
             flex-shrink: 0;
+            padding: 0;
         }
         
         .item-details {
