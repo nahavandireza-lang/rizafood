@@ -2,13 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>ریضا فود - غذا رضا فضا</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zain:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Add jQuery for image popup functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- Styles -->
     <style>
@@ -259,11 +262,107 @@
             display: block;
             width: 100%;
         }
+        
+        /* Image Preview Popup Styles */
+        .image-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .image-popup-container {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            animation: popupFadeIn 0.3s ease-out;
+        }
+        
+        .image-popup-content {
+            max-width: 100%;
+            max-height: 80vh;
+            border: 4px solid var(--dark-ink);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-popup-close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-red);
+            border: 3px solid var(--dark-ink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cream);
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes popupFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         @yield('content')
     </div>
+    
+    <!-- Image Preview Popup -->
+    <div class="image-popup-overlay" id="imagePopup">
+        <div class="image-popup-container">
+            <img class="image-popup-content" id="popupImage" src="" alt="Food Item">
+            <div class="image-popup-close" onclick="closeImagePopup()">×</div>
+        </div>
+    </div>
+    
+    <script>
+        // Make item images clickable to open in popup
+        $(document).ready(function() {
+            // Add click event to all item images
+            $('.item-icon img').css('cursor', 'pointer').click(function() {
+                openImagePopup($(this).attr('src'));
+            });
+        });
+        
+        // Function to open the image popup
+        function openImagePopup(imageSrc) {
+            $('#popupImage').attr('src', imageSrc);
+            $('#imagePopup').css('display', 'flex');
+            
+            // Prevent scrolling of the background
+            $('body').css('overflow', 'hidden');
+        }
+        
+        // Function to close the image popup
+        function closeImagePopup() {
+            $('#imagePopup').css('display', 'none');
+            
+            // Re-enable scrolling
+            $('body').css('overflow', 'auto');
+        }
+        
+        // Close popup when clicking outside the image
+        $('#imagePopup').click(function(e) {
+            if (e.target === this) {
+                closeImagePopup();
+            }
+        });
+    </script>
 </body>
 </html>
