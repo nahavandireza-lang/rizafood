@@ -191,6 +191,11 @@
             flex-shrink: 0;
             padding: 0;
         }
+        .item-icon img {
+		    width: 56px;
+		    height: 56px;
+		    border-radius: 6px;
+	    }
         
         .item-details {
             flex-grow: 1;
