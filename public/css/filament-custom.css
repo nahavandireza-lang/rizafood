@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@400;500;600;700&display=swap');
+
+/* Set RTL direction for the entire admin panel */
+html, body {
+    direction: rtl;
+}
+
+/* Additional custom styles for Filament admin panel */
+.fi-sidebar-header-heading, 
+.fi-breadcrumbs, 
+.fi-tabs, 
+.fi-btn, 
+.fi-input, 
+.fi-ta-text, 
+.fi-fo-field-wrp, 
+.fi-fo-field-wrp-label, 
+.fi-fo-field, 
+.fi-modal-heading, 
+.fi-section-header-heading, 
+.fi-dropdown-list-item-label,
+.fi-dropdown-header-label,
+.fi-pagination,
+.fi-ta-header-cell-label,
+.fi-ta-cell,
+.fi-badge,
+.fi-ac-icon-btn,
+.fi-ac-btn,
+.fi-no-notification-heading,
+.fi-no-notification-description,
+.fi-simple-header-heading,
+.fi-simple-footer,
+.fi-header-heading,
+.fi-global-search-result-label,
+.fi-global-search-no-results-heading,
+.fi-global-search-no-results-description,
+.fi-global-search-input {
+    font-family: 'Zain', sans-serif !important;
+}
+
+/* Fix RTL issues */
+[dir="rtl"] .fi-sidebar-nav {
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+[dir="rtl"] .fi-sidebar-item-icon {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .fi-breadcrumbs-item-separator {
+    transform: rotate(180deg);
+}
+
+/* Add some custom styling for Persian text */
+[dir="rtl"] {
+    letter-spacing: 0;
+    line-height: 1.8;
+}

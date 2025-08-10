@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-family: 'Zain', sans-serif;
+}
+
+.fi-sidebar-header-heading, 
+.fi-breadcrumbs, 
+.fi-tabs, 
+.fi-btn, 
+.fi-input, 
+.fi-ta-text, 
+.fi-fo-field-wrp, 
+.fi-fo-field-wrp-label, 
+.fi-fo-field, 
+.fi-modal-heading, 
+.fi-section-header-heading, 
+.fi-dropdown-list-item-label,
+.fi-dropdown-header-label,
+.fi-pagination,
+.fi-ta-header-cell-label,
+.fi-ta-cell,
+.fi-badge,
+.fi-ac-icon-btn,
+.fi-ac-btn,
+.fi-no-notification-heading,
+.fi-no-notification-description,
+.fi-simple-header-heading,
+.fi-simple-footer,
+.fi-header-heading,
+.fi-global-search-result-label,
+.fi-global-search-no-results-heading,
+.fi-global-search-no-results-description,
+.fi-global-search-input,
+.fi-select-input,
+.fi-select-option,
+.fi-select-placeholder,
+.fi-select-trigger-label,
+.fi-select-trigger-icon,
+.fi-select-popover,
+.fi-select-option-label,
+.fi-select-option-description,
+.fi-select-option-state,
+.fi-select-option-icon,
+.fi-select-option-color,
+.fi-select-option-image,
+.fi-select-option-label-text,
+.fi-select-option-description-text,
+.fi-select-option-state-text,
+.fi-select-option-icon-text,
+.fi-select-option-color-text,
+.fi-select-option-image-text,
+.fi-select-option-label-icon,
+.fi-select-option-description-icon,
+.fi-select-option-state-icon,
+.fi-select-option-icon-icon,
+.fi-select-option-color-icon,
+.fi-select-option-image-icon,
+.fi-select-option-label-color,
+.fi-select-option-description-color,
+.fi-select-option-state-color,
+.fi-select-option-icon-color,
+.fi-select-option-color-color,
+.fi-select-option-image-color,
+.fi-select-option-label-image,
+.fi-select-option-description-image,
+.fi-select-option-state-image,
+.fi-select-option-icon-image,
+.fi-select-option-color-image,
+.fi-select-option-image-image,
+.fi-select-option-label-text-image,
+.fi-select-option-description-text-image,
+.fi-select-option-state-text-image,
+.fi-select-option-icon-text-image,
+.fi-select-option-color-text-image,
+.fi-select-option-image-text-image,
+.fi-select-option-label-icon-image,
+.fi-select-option-description-icon-image,
+.fi-select-option-state-icon-image,
+.fi-select-option-icon-icon-image,
+.fi-select-option-color-icon-image,
+.fi-select-option-image-icon-image,
+.fi-select-option-label-color-image,
+.fi-select-option-description-color-image,
+.fi-select-option-state-color-image,
+.fi-select-option-icon-color-image,
+.fi-select-option-color-color-image,
+.fi-select-option-image-color-image,
+.fi-select-option-label-image-image,
+.fi-select-option-description-image-image,
+.fi-select-option-state-image-image,
+.fi-select-option-icon-image-image,
+.fi-select-option-color-image-image,
+.fi-select-option-image-image-image {
+    font-family: 'Zain', sans-serif !important;
+}
+
+/* Fix RTL issues */
+[dir="rtl"] .fi-sidebar-nav {
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+[dir="rtl"] .fi-sidebar-item-icon {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .fi-breadcrumbs-item-separator {
+    transform: rotate(180deg);
+}
+
+/* Add some custom styling for Persian text */
+[dir="rtl"] {
+    letter-spacing: 0;
+    line-height: 1.8;
+}
