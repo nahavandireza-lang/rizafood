@@ -173,7 +173,7 @@
                     </p>
                     <div class="mt-12 flex justify-center lg:justify-start gap-6 animate-text-right" style="animation-delay: 0.8s;">
                         <a href="{{ route('menu') }}" class="px-12 py-3 rounded-full btn-primary">مشاهده منو</a>
-                        <a href="#" class="px-12 py-3 rounded-full btn-secondary">تماس با ما</a>
+                        <a href="#footer" class="px-12 py-3 rounded-full btn-primary">تماس با ما</a>
                     </div>
                 </div>
                 <div class="relative flex justify-center items-center h-[500px] lg:h-auto animate-text-left" style="animation-delay: 0.5s;">
